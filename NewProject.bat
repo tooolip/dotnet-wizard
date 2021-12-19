@@ -111,7 +111,7 @@ dotnet new nunit -n "%projectName%"Tests
 dotnet add "%projectName%"Tests/"%projectName%"Tests.csproj reference "%projectName%"/"%projectName%".csproj
 dotnet sln add "%projectName%"Tests/"%projectName%"Tests.csproj
 
-if '%moqTesting%' == '2' goto end
+if '%projectMoq%' == '2' goto end
 
 cd "%projectName%"Tests
 dotnet add package moq
